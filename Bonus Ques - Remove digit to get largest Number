@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	string s=to_string(n); // we are converting n into string 
+	
+	if(n<10) // if n is a single digit number than output is 0
+	cout<<0;
+	
+	else{
+	int x=9;
+	for(int i=0;i<s.length();i++)
+	x=min(x,s[i]-'0'); // here we are checking the minimum digit present in string s
+	string maxi="";
+	for(int i=0;i<s.length();i++)
+	{
+	    if(x==s[i]-'0')
+	    {
+	        string temp=s.substr(0,i)+s.substr(i+1); // temp is a string after removing minimum digit x from string s
+	        maxi=max(temp,maxi); // here we are comparing temp with maximum possible string maxi till now
+	    }
+	}
+	int res=stoi(maxi); // here we are converting string maxi into an integer
+	cout<<res; // output the final result
+	}
+	return 0;
+}
