@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int calculate(vector<int>&v, int n)
+{
+	
+	vector<int>left(n,0);
+	vector<int>right(n,0);
+
+	int w=0;
+
+	left[0]=v[0];
+	for (int i=1; i<n; i++)
+		left[i]=max(left[i-1], v[i]);
+
+	right[n-1]=v[n-1];
+	for (int i=n-2; i>=0; i--)
+		right[i]=max(right[i+1], v[i]);
+
+	for (int i=0; i<n; i++) {
+		int temp=min(left[i], right[i]);
+		if (temp>v[i]) {
+			w+=temp-v[i];
+		}
+	}
+	return w;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter n: ";
+    cin>>n;
+    vector<int>v(n,0);
+    cout<<endl<<"Enter Elements: ";
+    for(int i=0;i<n;i++)
+    cin>>v[i];
+    cout<<endl;
+	cout <<calculate(v, n);
+	return 0;
+}
