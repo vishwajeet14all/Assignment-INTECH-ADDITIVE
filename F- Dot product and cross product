@@ -1,0 +1,19 @@
+Vector - A quantity that is characterized not only by magnitude but also by its direction, is called a vector. Velocity, force, acceleration, momentum, etc. are vectors.  
+
+
+Vectors can be multiplied in two ways:
+1.	Scalar product or Dot product
+2.	Vector Product or Cross product
+
+1.	Scalar Product/Dot Product of Vectors
+The resultant of dot product of two vectors is a scalar quantity. Consider two vectors a and b. The dot product is calculated as the product of magnitudes of a, b, and cosine of the angle between these vectors.
+Scalar product = |a||b| cos α
+Dot product are uses for-
+1. Checking whether 2 vectors are perpendicular.
+2. Finding work done by a force.
+
+2.	Cross Product of Vectors
+The Cross Product a×b of two vectors is another vector that is at right angles to both. Cross Product (a×b) = absin(θ)n^ 
+Where n^ is perpendicular to both the vectors.
+cross product are uses for-
+When we have forces that involve rotation, or turning about a point or an axis.
